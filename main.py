@@ -47,6 +47,7 @@ def handler():
                 if len(scpsInOu[k]):
                     scps += '\n'.join(scpsInOu[k])
                 else: 
+                    #none is returned if there are no SCPs attached
                     scps += 'none'
                 with Cluster(scps):
                     punit = OrganizationsOrganizationalUnit(k)
